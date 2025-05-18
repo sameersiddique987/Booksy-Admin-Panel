@@ -20,7 +20,7 @@ const AdminLogin = () => {
     setSuccess("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/v1/admin/login", formData);
+      const res = await axios.post("https://booksy-backend.vercel.app/api/v1/admin/login", formData);
       setSuccess(res.data.message);
       localStorage.setItem("adminToken", res.data.token);
       // ✅ Redirect to Add Book page
