@@ -130,7 +130,7 @@ export default function EditBook() {
             type="submit"
             disabled={loading}
             className={`w-full py-2 px-4 rounded-lg text-white transition duration-200 ${
-              loading ? "bg-gray-400 cursor-not-allowed" : "bg-green-600 hover:bg-green-700"
+              loading ? "bg-gray-400 cursor-not-allowed" : "bg-gray-900 hover:bg-gray-950"
             }`}
           >
             {loading ? "Updating..." : "✅ Update Book"}
