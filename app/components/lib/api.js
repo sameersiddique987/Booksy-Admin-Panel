@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://booksy-backend.vercel.app", // ✅ backend URL
+  baseURL: "https://booksy-backend.vercel.app", 
   
   withCredentials: true,
 });

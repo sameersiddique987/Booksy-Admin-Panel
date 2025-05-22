@@ -22,17 +22,17 @@ export default function AddBook() {
       return;
     }
 
-    console.log("📤 Image ready for upload:", image); // Log image object
+    console.log("📤 Image ready for upload:", image);
 
     setLoading(true);
     try {
       const formData = new FormData();
       formData.append("image", image);
 
-      console.log("📦 FormData being sent:", formData.get("image")); // Log FormData content
+      console.log("📦 FormData being sent:", formData.get("image"));
 
       const imgRes = await api.post("/upload", formData);
-      console.log("✅ Upload response:", imgRes?.data); // Log server response
+      console.log("✅ Upload response:", imgRes?.data);
 
       const imageUrl = imgRes?.data?.url;
 
@@ -149,7 +149,7 @@ export default function AddBook() {
                 className="mt-1 block w-full text-sm"
                 onChange={(e) => {
                   const file = e.target.files[0];
-                  console.log("📷 Selected image:", file); // Log selected image
+                  console.log("📷 Selected image:", file);
                   setImage(file);
                 }}
               />
